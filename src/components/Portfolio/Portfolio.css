@@ -1,0 +1,139 @@
+.work {
+  padding-bottom: 4rem;
+}
+
+.work__filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.work__item {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  border-radius: var(--border-radius);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.work__item:hover,
+.work__item.active {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+/* Responsive grid */
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .work__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work__card {
+  width: 100%;
+  background-color: var(--container-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.work__card:hover {
+  transform: translateY(-8px);
+}
+
+.work__thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.work__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.work__card:hover .work__img {
+  transform: scale(1.05);
+}
+
+.work__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(53, 0, 63, 0.2);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.work__card:hover .work__mask {
+  opacity: 1;
+}
+
+.work__category {
+  display: block;
+  padding: 0.75rem 1rem 0 1rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.work__title {
+  padding: 0.25rem 1rem 1rem;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semibold);
+  color: var(--title-color);
+}
+
+.work__button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.work__button:hover {
+  background-color: hsl(353, 100%, 55%);
+}
+
+.work__button-icon {
+  font-size: 1.2rem;
+}
+
+.testimonial__empty {
+  padding-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}

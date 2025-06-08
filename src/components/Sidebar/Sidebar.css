@@ -1,0 +1,99 @@
+/* Sidebar container */
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--body-color);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  width: 110px;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+}
+
+/* Logo wrapper */
+.nav__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Logo image */
+.nav__logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid hsl(43, 100%, 68%);
+}
+
+/* Navigation list */
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav__links {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: var(--font-bold);
+  transition: 0.3s;
+}
+
+.nav__links:hover {
+  color: hsl(43, 100%, 68%);
+}
+
+/* Copyright */
+.copyright {
+  color: hsl(245, 15%, 65%);
+  font-size: var(--small-font-size);
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+}
+
+/* Toggle button */
+.nav__toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  height: 40px;
+  width: 45px;
+  background-color: var(--body-color);
+  border: 1px solid #e8dfec;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1024px) {
+  .aside {
+    left: -120px;
+  }
+
+  .aside.show-menu {
+    left: 0;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  /* Hide logo on smaller screens */
+  .nav__logo-img {
+    display: none;
+  }
+}
+
