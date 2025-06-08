@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Sidebar from './components/sidebar/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Services from './components/Services/Services';
